@@ -2,8 +2,8 @@ const app = require('express')();
 let server = {};
 
 
-// server = require('http').createServer(app);
-server = require('https').createServer(app);
+server = require('http').createServer(app);
+// server = require('https').createServer(app);
 
 const io = require('socket.io')(server, { cors: true, origins: false });
 const signalServer = require('simple-signal-server')(io)
